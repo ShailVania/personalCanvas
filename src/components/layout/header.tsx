@@ -4,7 +4,6 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import {
   Code,
   Home,
@@ -16,6 +15,13 @@ import {
 } from 'lucide-react';
 import { ThemeSwitcher } from '../theme-switcher';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -27,7 +33,6 @@ const navItems = [
 
 export function Header() {
   const pathname = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -61,46 +66,42 @@ export function Header() {
         
         {/* Right section: Theme Switcher and Mobile Menu */}
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <ThemeSwitcher />
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[300px]">
-                <SheetTitle className="sr-only">Menu</SheetTitle>
-                <SheetDescription className="sr-only">Main navigation</SheetDescription>
-              <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <Code className="h-8 w-8" />
-                <span className="font-bold">Personal Canvas</span>
-              </Link>
-              <div className="mt-6 flex flex-col space-y-4">
+          <div className="hidden md:block">
+            <ThemeSwitcher />
+          </div>
+
+          <div className="md:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={cn(
-                      'flex items-center gap-2 transition-colors group',
-                      pathname === item.href ? 'font-bold' : 'text-foreground/60 hover:font-bold'
-                    )}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <item.icon className={cn('h-4 w-4', pathname === item.href ? 'text-primary' : 'text-foreground/60 group-hover:text-primary')} />
-                    <span className={cn(
-                      'transition-colors',
-                      pathname === item.href
-                          ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
-                          : 'group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
-                    )}>
-                      {item.label}
-                    </span>
-                  </Link>
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        'flex items-center gap-2',
+                        pathname === item.href ? 'font-bold text-primary' : 'text-foreground/60'
+                      )}
+                    >
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.label}</span>
+                    </Link>
+                  </DropdownMenuItem>
                 ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <div className="flex w-full items-center justify-center">
+                    <ThemeSwitcher />
+                  </div>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </div>
     </header>
