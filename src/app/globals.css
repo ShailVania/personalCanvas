@@ -86,7 +86,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground bg-gradient-to-br from-card to-background;
   }
   .dark body {
     @apply bg-gradient-to-br from-[#120812] to-[#471f47];
