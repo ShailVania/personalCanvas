@@ -2,15 +2,8 @@
 
 import { Github, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '../ui/button';
-import { useEffect, useState } from 'react';
 
 export function Footer() {
-  const [currentYear, setCurrentYear] = useState<number>();
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
-
   return (
     <footer className="w-full py-2">
       <div className="container flex flex-col items-center gap-1 text-center">
@@ -46,11 +39,6 @@ export function Footer() {
             </a>
           </Button>
         </div>
-        <p className="text-sm text-muted-foreground">
-          {currentYear
-            ? `© ${currentYear} Personal Canvas. All Rights Reserved.`
-            : '\u00A0'}
-        </p>
       </div>
     </footer>
   );
