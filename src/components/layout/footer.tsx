@@ -1,8 +1,15 @@
+'use client';
+
 import { Github, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useEffect, useState } from 'react';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number>();
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="w-full bg-background/95 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -39,9 +46,11 @@ export function Footer() {
             </a>
           </Button>
         </div>
-        <p className="text-sm text-muted-foreground">
-          &copy; {currentYear} Personal Canvas. All Rights Reserved.
-        </p>
+        {currentYear && (
+          <p className="text-sm text-muted-foreground">
+            &copy; {currentYear} Personal Canvas. All Rights Reserved.
+          </p>
+        )}
       </div>
     </footer>
   );
