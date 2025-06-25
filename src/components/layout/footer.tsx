@@ -8,17 +8,32 @@ export function Footer() {
     <footer className="w-full bg-background/95 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex flex-col items-center gap-1 text-center">
         <div className="flex items-center justify-center gap-2">
-          <Button variant="ghost" size="icon" asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="text-muted-foreground transition-colors duration-300 hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:text-primary-foreground"
+          >
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github />
             </a>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="text-muted-foreground transition-colors duration-300 hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:text-primary-foreground"
+          >
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <Youtube />
             </a>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="text-muted-foreground transition-colors duration-300 hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:text-primary-foreground"
+          >
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin />
             </a>
