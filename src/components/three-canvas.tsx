@@ -36,6 +36,8 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
       color: objectColor,
       metalness: 0.8,
       roughness: 0.1,
+      transparent: true,
+      opacity: 0.2,
     });
     
     let shape: THREE.Mesh;
@@ -105,5 +107,5 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
     };
   }, [letter, theme]);
 
-  return <div ref={mountRef} className="fixed inset-0 z-[-1]" />;
+  return <div ref={mountRef} className="fixed inset-0 z-[-1] blur-sm" />;
 }
