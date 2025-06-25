@@ -46,11 +46,11 @@ export function Footer() {
             </a>
           </Button>
         </div>
-        {currentYear && (
-          <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} Personal Canvas. All Rights Reserved.
-          </p>
-        )}
+        <p className="text-sm text-muted-foreground">
+          {currentYear
+            ? `© ${currentYear} Personal Canvas. All Rights Reserved.`
+            : '\u00A0'}
+        </p>
       </div>
     </footer>
   );
