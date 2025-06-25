@@ -28,7 +28,7 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
     
     // Material
     const material = new THREE.MeshStandardMaterial({
-      color: 0x0afbff,
+      color: 0xffffff,
       metalness: 0.8,
       roughness: 0.1,
     });
@@ -63,10 +63,10 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
     }
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1);
+    const pointLight = new THREE.PointLight(0xffffff, 3);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
 
