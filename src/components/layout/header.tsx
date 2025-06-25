@@ -83,14 +83,18 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       'flex items-center gap-2 transition-colors group',
-                      pathname === item.href
-                        ? 'font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
-                        : 'text-foreground/60 hover:font-bold hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:bg-clip-text hover:text-transparent'
+                      pathname === item.href ? 'font-bold' : 'text-foreground/60 hover:font-bold'
                     )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <item.icon className={cn('h-4 w-4', pathname === item.href ? 'text-primary' : 'text-foreground/60 group-hover:text-primary')} />
-                    {item.label}
+                    <span className={cn(
+                      pathname === item.href
+                          ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                          : 'group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
+                    )}>
+                      {item.label}
+                    </span>
                   </Link>
                 ))}
               </div>
