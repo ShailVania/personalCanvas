@@ -69,7 +69,7 @@ export function Header() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
+            <SheetContent side="left" className="w-[300px]">
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <SheetDescription className="sr-only">Main navigation</SheetDescription>
               <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
@@ -89,6 +89,7 @@ export function Header() {
                   >
                     <item.icon className={cn('h-4 w-4', pathname === item.href ? 'text-primary' : 'text-foreground/60 group-hover:text-primary')} />
                     <span className={cn(
+                      'transition-colors',
                       pathname === item.href
                           ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
                           : 'group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
