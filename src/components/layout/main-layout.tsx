@@ -23,7 +23,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
     <>
       <ThreeCanvas letter={pathname === '/' ? 'S' : undefined} />
       <SidebarProvider>
-        <Sidebar>
+        <Sidebar variant="floating">
           <SidebarHeader>
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon" asChild>
