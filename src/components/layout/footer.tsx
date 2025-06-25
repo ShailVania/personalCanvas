@@ -1,18 +1,13 @@
-import { Code, Github, Linkedin, Youtube } from 'lucide-react';
-import Link from 'next/link';
+import { Github, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '../ui/button';
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex flex-col items-center justify-between gap-4 px-6 py-4 md:h-16 md:flex-row md:py-0">
-        <div className="flex items-center gap-3">
-          <Code className="h-8 w-8" />
-          <p className="text-sm leading-loose">
-            Built by You. Inspired by Grok.
-          </p>
-        </div>
-        <div className="flex items-center justify-center">
+    <footer className="w-full border-t border-border/40 bg-background/95 py-6 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex flex-col items-center gap-4 text-center">
+        <div className="flex items-center justify-center gap-2">
           <Button variant="ghost" size="icon" asChild>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github />
@@ -29,6 +24,9 @@ export function Footer() {
             </a>
           </Button>
         </div>
+        <p className="text-sm text-muted-foreground">
+          &copy; {currentYear} Personal Canvas. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
