@@ -34,24 +34,24 @@ export function Header() {
       <div className="container flex h-24 max-w-screen-2xl items-center px-6">
         
         {/* Left section: Logo */}
-        <div className="flex flex-1">
-          <Link href="/" className="flex items-center space-x-4">
+        <div className="flex flex-1 justify-start">
+          <Link href="/" className="flex items-center space-x-2">
             <Code className="h-8 w-8" />
             <span className="font-bold sm:inline-block">Personal Canvas</span>
           </Link>
         </div>
 
         {/* Middle section: Desktop Navigation */}
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden items-center justify-center gap-6 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                'transition-colors hover:text-foreground/80',
+                'transition-colors',
                 pathname === item.href
-                  ? 'text-foreground'
-                  : 'text-foreground/60'
+                  ? 'font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                  : 'text-foreground/60 hover:font-bold hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:bg-clip-text hover:text-transparent'
               )}
             >
               {item.label}
@@ -72,7 +72,7 @@ export function Header() {
             <SheetContent side="left">
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <SheetDescription className="sr-only">Main navigation</SheetDescription>
-              <Link href="/" className="flex items-center space-x-4" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Code className="h-8 w-8" />
                 <span className="font-bold">Personal Canvas</span>
               </Link>
@@ -81,10 +81,15 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="flex items-center gap-2"
+                    className={cn(
+                      'flex items-center gap-2 transition-colors group',
+                      pathname === item.href
+                        ? 'font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                        : 'text-foreground/60 hover:font-bold hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:bg-clip-text hover:text-transparent'
+                    )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <item.icon className="h-4 w-4" />
+                    <item.icon className={cn('h-4 w-4', pathname === item.href ? 'text-primary' : 'text-foreground/60 group-hover:text-primary')} />
                     {item.label}
                   </Link>
                 ))}
