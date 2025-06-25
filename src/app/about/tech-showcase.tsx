@@ -24,7 +24,7 @@ export function TechShowcase() {
                     className="group transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
                     <CardContent className="flex flex-col items-center justify-center p-6">
-                        <tech.icon className="h-12 w-12 text-primary transition-colors group-hover:text-accent-foreground" />
+                        <tech.icon className="h-12 w-12 text-primary transition-colors group-hover:text-accent" />
                         <p className="mt-4 font-semibold">{tech.name}</p>
                     </CardContent>
                 </Card>
