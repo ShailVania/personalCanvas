@@ -16,7 +16,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, description, imageUrl, projectUrl, tags, imageHint }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col transition-all hover:shadow-lg">
+    <Card className="flex h-full flex-col transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
       <CardHeader className="p-0 rounded-t-2xl overflow-hidden">
         <div className="relative h-48 w-full">
           <Image
