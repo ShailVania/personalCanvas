@@ -1,9 +1,10 @@
+import { ThreeCanvas } from '@/components/three-canvas';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="relative flex h-full min-h-[calc(100vh-10rem)] flex-col items-center justify-center overflow-hidden rounded-lg bg-background/20 backdrop-blur-md">
+    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-card/60 backdrop-blur-xl glass-border">
       <div className="relative z-10 flex flex-col items-center gap-6 p-8 text-center">
         <h1 className="font-headline text-4xl font-bold md:text-6xl lg:text-7xl">
           Welcome to my Canvas
