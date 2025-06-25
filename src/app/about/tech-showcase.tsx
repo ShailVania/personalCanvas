@@ -21,7 +21,7 @@ export function TechShowcase() {
             {technologies.map((tech, i) => (
                 <Card
                     key={tech.name}
-                    className="group transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="group transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30"
                 >
                     <CardContent className="flex flex-col items-center justify-center p-6">
                         <tech.icon className="h-12 w-12 text-muted-foreground transition-colors group-hover:text-primary" />
