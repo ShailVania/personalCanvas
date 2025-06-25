@@ -5,7 +5,7 @@
 @layer utilities {
   .glass-border::after {
     content: "";
-    @apply absolute inset-0 -z-10 m-[-1px] rounded-[inherit] bg-gradient-to-br from-primary/20 to-primary/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100;
+    @apply absolute inset-0 -z-10 m-[-1px] rounded-[inherit] bg-gradient-to-br from-primary/20 to-primary/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-data-[active=true]:opacity-100;
   }
 }
 
@@ -30,7 +30,6 @@
     --border: 300 40% 86%;
     --input: 300 40% 86%;
     --ring: 295 80% 60%;
-    --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
