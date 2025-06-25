@@ -65,7 +65,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="mt-8 border-none bg-transparent shadow-none">
+    <Card className="mt-8">
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

@@ -13,8 +13,11 @@ import { Header } from './header';
 import { Code, Github, Linkedin, Youtube } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { usePathname } from 'next/navigation';
+import { ThreeCanvas } from '../three-canvas';
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
   return (
     <SidebarProvider>
       <Sidebar>
@@ -53,6 +56,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
+        <ThreeCanvas letter={pathname === '/' ? 'S' : undefined} />
         <Header />
         <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>
       </SidebarInset>

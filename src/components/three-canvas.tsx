@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 
-export function ThreeCanvas() {
+export function ThreeCanvas({ letter }: { letter?: string }) {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,16 +25,42 @@ export function ThreeCanvas() {
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
-
-    // Geometry and Material
-    const geometry = new THREE.IcosahedronGeometry(1.5, 0);
+    
+    // Material
     const material = new THREE.MeshStandardMaterial({
-      color: 0x7395ae,
-      metalness: 0.1,
-      roughness: 0.5,
+      color: 0x4b96be, // charcoal-700
+      metalness: 0.8,
+      roughness: 0.1,
     });
-    const shape = new THREE.Mesh(geometry, material);
-    scene.add(shape);
+    
+    let shape: THREE.Mesh;
+
+    if (letter) {
+      const fontLoader = new FontLoader();
+      fontLoader.load(
+        'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/fonts/helvetiker_bold.typeface.json',
+        (font) => {
+          const textGeometry = new TextGeometry(letter, {
+            font: font,
+            size: 2.5,
+            depth: 0.5,
+            curveSegments: 12,
+            bevelEnabled: true,
+            bevelThickness: 0.1,
+            bevelSize: 0.05,
+            bevelOffset: 0,
+            bevelSegments: 5,
+          });
+          textGeometry.center();
+          shape = new THREE.Mesh(textGeometry, material);
+          scene.add(shape);
+        }
+      );
+    } else {
+      const geometry = new THREE.IcosahedronGeometry(1.5, 1);
+      shape = new THREE.Mesh(geometry, material);
+      scene.add(shape);
+    }
 
     // Lights
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -45,8 +73,10 @@ export function ThreeCanvas() {
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      shape.rotation.x += 0.005;
-      shape.rotation.y += 0.005;
+      if (shape) {
+        shape.rotation.x += 0.002;
+        shape.rotation.y += 0.002;
+      }
       renderer.render(scene, camera);
     };
     animate();
@@ -68,7 +98,7 @@ export function ThreeCanvas() {
         currentMount.removeChild(renderer.domElement);
       }
     };
-  }, []);
+  }, [letter]);
 
-  return <div ref={mountRef} className="absolute inset-0 z-0" />;
+  return <div ref={mountRef} className="fixed inset-0 z-[-1]" />;
 }

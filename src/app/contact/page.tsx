@@ -1,10 +1,8 @@
 import { ContactForm } from './contact-form';
-import { ThreeCanvas } from '@/components/three-canvas';
 
 export default function Contact() {
   return (
-    <div className="relative flex min-h-[calc(100vh-10rem)] items-center justify-center overflow-hidden rounded-lg bg-background/50 backdrop-blur-sm">
-      <ThreeCanvas />
+    <div className="relative flex min-h-[calc(100vh-10rem)] items-center justify-center overflow-hidden rounded-lg bg-background/20 backdrop-blur-md">
       <div className="relative z-10 w-full max-w-lg p-4">
         <div className="space-y-4 text-center">
             <h1 className="font-headline text-4xl font-bold">Contact Me</h1>
