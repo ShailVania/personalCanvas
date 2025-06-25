@@ -4,13 +4,13 @@ import { Download } from "lucide-react";
 
 export default function Resume() {
     return (
-        <div className="space-y-8">
+        <div className="w-full max-w-3xl space-y-8">
             <div className="text-center">
                 <h1 className="font-headline text-5xl font-bold md:text-6xl">My Resume</h1>
                 <p className="mt-4 text-lg text-muted-foreground">Here's a summary of my experience and skills.</p>
             </div>
 
-            <Card>
+            <Card className="transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
                 <CardHeader>
                     <CardTitle>Download Resume</CardTitle>
                     <CardDescription>Click the button below to download a PDF version of my resume.</CardDescription>
@@ -25,7 +25,7 @@ export default function Resume() {
                 </CardContent>
             </Card>
 
-            <Card>
+            <Card className="transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
                 <CardHeader>
                     <CardTitle>Work Experience</CardTitle>
                 </CardHeader>
@@ -50,7 +50,7 @@ export default function Resume() {
                 </CardContent>
             </Card>
 
-             <Card>
+             <Card className="transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
                 <CardHeader>
                     <CardTitle>Education</CardTitle>
                 </CardHeader>
