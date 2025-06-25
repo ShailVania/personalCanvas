@@ -20,50 +20,52 @@ import { ThemeSwitcher } from '../theme-switcher';
 export function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   return (
-    <SidebarProvider>
-      <Sidebar>
-        <SidebarHeader>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="/">
-                <Code className="h-6 w-6" />
-                <span className="sr-only">Home</span>
-              </Link>
-            </Button>
-            <h1 className="text-xl font-semibold font-headline">Personal Canvas</h1>
-          </div>
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarNav />
-        </SidebarContent>
-        <SidebarFooter>
-          <div className="flex items-center justify-center p-2">
-            <ThemeSwitcher />
-          </div>
-          <div className="flex items-center justify-around p-2">
-            <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <Youtube />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin />
-              </a>
-            </Button>
-          </div>
-        </SidebarFooter>
-      </Sidebar>
-      <SidebarInset>
-        <ThreeCanvas letter={pathname === '/' ? 'S' : undefined} />
-        <Header />
-        <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>
-      </SidebarInset>
-    </SidebarProvider>
+    <>
+      <ThreeCanvas letter={pathname === '/' ? 'S' : undefined} />
+      <SidebarProvider>
+        <Sidebar>
+          <SidebarHeader>
+            <div className="flex items-center gap-2">
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="/">
+                  <Code className="h-6 w-6" />
+                  <span className="sr-only">Home</span>
+                </Link>
+              </Button>
+              <h1 className="text-xl font-semibold font-headline">Personal Canvas</h1>
+            </div>
+          </SidebarHeader>
+          <SidebarContent>
+            <SidebarNav />
+          </SidebarContent>
+          <SidebarFooter>
+            <div className="flex items-center justify-center p-2">
+              <ThemeSwitcher />
+            </div>
+            <div className="flex items-center justify-around p-2">
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <Youtube />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin />
+                </a>
+              </Button>
+            </div>
+          </SidebarFooter>
+        </Sidebar>
+        <SidebarInset>
+          <Header />
+          <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>
+        </SidebarInset>
+      </SidebarProvider>
+    </>
   );
 }
