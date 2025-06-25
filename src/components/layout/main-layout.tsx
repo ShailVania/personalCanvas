@@ -14,14 +14,12 @@ import { Code, Github, Linkedin, Youtube } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { usePathname } from 'next/navigation';
-import { ThreeCanvas } from '../three-canvas';
 import { ThemeSwitcher } from '../theme-switcher';
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   return (
     <>
-      <ThreeCanvas letter={pathname === '/' ? 'S' : undefined} />
       <SidebarProvider>
         <Sidebar variant="floating">
           <SidebarHeader>
