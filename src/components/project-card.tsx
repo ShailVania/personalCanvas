@@ -38,7 +38,7 @@ export function ProjectCard({ title, description, imageUrl, projectUrl, tags, im
             <Badge key={tag} variant="secondary">{tag}</Badge>
           ))}
         </div>
-        <Button asChild variant="outline" className="w-full">
+        <Button asChild variant="default" className="w-full">
           <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
             View Project
             <ArrowUpRight className="ml-2 h-4 w-4" />
