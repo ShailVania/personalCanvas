@@ -28,7 +28,7 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
     
     // Material
     const material = new THREE.MeshStandardMaterial({
-      color: 0x4b96be, // charcoal-700
+      color: 0x0afbff,
       metalness: 0.8,
       roughness: 0.1,
     });
