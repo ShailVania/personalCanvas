@@ -15,6 +15,7 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import { usePathname } from 'next/navigation';
 import { ThreeCanvas } from '../three-canvas';
+import { ThemeSwitcher } from '../theme-switcher';
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -36,6 +37,9 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
           <SidebarNav />
         </SidebarContent>
         <SidebarFooter>
+          <div className="flex items-center justify-center p-2">
+            <ThemeSwitcher />
+          </div>
           <div className="flex items-center justify-around p-2">
             <Button variant="ghost" size="icon" asChild>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

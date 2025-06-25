@@ -4,14 +4,19 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
+import { useTheme } from 'next-themes';
 
 export function ThreeCanvas({ letter }: { letter?: string }) {
   const mountRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!mountRef.current) return;
 
     const currentMount = mountRef.current;
+
+    // Use a bright color for dark theme and a dark color for light theme
+    const objectColor = theme === 'dark' ? 0xffffff : 0x144552;
 
     // Scene
     const scene = new THREE.Scene();
@@ -28,7 +33,7 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
     
     // Material
     const material = new THREE.MeshStandardMaterial({
-      color: 0xffffff,
+      color: objectColor,
       metalness: 0.8,
       roughness: 0.1,
     });
@@ -98,7 +103,7 @@ export function ThreeCanvas({ letter }: { letter?: string }) {
         currentMount.removeChild(renderer.domElement);
       }
     };
-  }, [letter]);
+  }, [letter, theme]);
 
   return <div ref={mountRef} className="fixed inset-0 z-[-1]" />;
 }
