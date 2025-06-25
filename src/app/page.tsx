@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="relative flex h-full flex-col items-center justify-center text-center">
-      <ThreeCanvas letter="G" />
+      <ThreeCanvas letter="<s/v>" />
       <div className="z-10">
         <h1 className="font-headline text-5xl font-bold md:text-7xl">
           A Creative Digital Canvas
