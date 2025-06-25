@@ -10,7 +10,7 @@ export default function About() {
           <AvatarFallback>YN</AvatarFallback>
         </Avatar>
         <div className="flex-1 text-center md:text-left">
-          <h1 className="font-headline text-4xl font-bold">About Me</h1>
+          <h1 className="font-headline text-5xl font-bold md:text-6xl">About Me</h1>
           <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
             I am a passionate software engineer with a love for creating dynamic and user-friendly web applications. My journey in tech started with a simple curiosity about how websites worked, and it has since blossomed into a full-fledged career. I thrive on challenges and am constantly learning new technologies to push the boundaries of what's possible on the web.
           </p>
@@ -21,7 +21,7 @@ export default function About() {
       </div>
       
       <div className="space-y-6">
-        <h2 className="text-center font-headline text-3xl font-bold">My Tech Stack</h2>
+        <h2 className="text-center font-headline text-4xl font-bold">My Tech Stack</h2>
         <p className="text-center text-lg text-muted-foreground">Technologies I love to work with.</p>
         <TechShowcase />
       </div>

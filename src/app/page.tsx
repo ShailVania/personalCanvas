@@ -1,22 +1,24 @@
 import { Button } from '@/components/ui/button';
+import { ThreeCanvas } from '@/components/three-canvas';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="relative flex h-[calc(100vh-8rem)] flex-col items-center justify-center overflow-hidden rounded-2xl bg-white/20 dark:bg-black/20 backdrop-blur-xl glass-border">
-      <div className="relative z-10 flex flex-col items-center gap-6 p-8 text-center">
-        <h1 className="font-headline text-4xl font-bold md:text-6xl lg:text-7xl">
-          Welcome to my Canvas
+    <div className="relative flex h-full flex-col items-center justify-center text-center">
+      <ThreeCanvas letter="G" />
+      <div className="z-10">
+        <h1 className="font-headline text-5xl font-bold md:text-7xl">
+          A Creative Digital Canvas
         </h1>
-        <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
-          I'm a creative developer and designer, passionate about building beautiful and interactive web experiences. This is my digital playground.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+          I'm a developer and designer, passionate about building beautiful and interactive web experiences. This is my digital playground.
         </p>
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Button asChild size="lg" variant="glass" className="rounded-full">
-            <Link href="/contact">Contact Me</Link>
+        <div className="mt-8 flex justify-center gap-4">
+          <Button asChild size="lg">
+            <Link href="/projects">View Projects</Link>
           </Button>
-          <Button asChild size="lg" variant="glass" className="rounded-full bg-secondary/60 hover:bg-secondary/80 text-secondary-foreground">
-            <Link href="/resume">My Resume</Link>
+          <Button asChild size="lg" variant="secondary">
+            <Link href="/contact">Contact Me</Link>
           </Button>
         </div>
       </div>

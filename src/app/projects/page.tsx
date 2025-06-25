@@ -39,8 +39,8 @@ export default function Projects() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h1 className="font-headline text-4xl font-bold">My Projects</h1>
-        <p className="mt-2 text-lg text-muted-foreground">A selection of my work.</p>
+        <h1 className="font-headline text-5xl font-bold md:text-6xl">My Projects</h1>
+        <p className="mt-4 text-lg text-muted-foreground">A selection of my work.</p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (

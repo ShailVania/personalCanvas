@@ -6,8 +6,8 @@ export default function Resume() {
     return (
         <div className="space-y-8">
             <div className="text-center">
-                <h1 className="font-headline text-4xl font-bold">My Resume</h1>
-                <p className="mt-2 text-lg text-muted-foreground">Here's a summary of my experience and skills.</p>
+                <h1 className="font-headline text-5xl font-bold md:text-6xl">My Resume</h1>
+                <p className="mt-4 text-lg text-muted-foreground">Here's a summary of my experience and skills.</p>
             </div>
 
             <Card>
