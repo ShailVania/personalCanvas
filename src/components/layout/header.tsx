@@ -19,7 +19,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
@@ -80,21 +79,26 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
                 {navItems.map((item) => (
-                  <DropdownMenuItem key={item.href} asChild>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        'flex items-center gap-2',
-                        pathname === item.href ? 'font-bold text-primary' : 'text-foreground/60'
-                      )}
-                    >
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.label}</span>
+                  <DropdownMenuItem key={item.href} asChild className="cursor-pointer focus:bg-transparent">
+                    <Link href={item.href} className="group flex w-full items-center gap-2">
+                        <item.icon className={cn(
+                          "h-4 w-4",
+                          pathname === item.href ? 'text-primary' : 'text-foreground/60',
+                          'group-hover:text-primary'
+                      )} />
+                      <span className={cn(
+                          'transition-colors',
+                          pathname === item.href
+                              ? 'font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                              : 'text-foreground/60',
+                          'group-hover:font-bold group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
+                      )}>
+                          {item.label}
+                      </span>
                     </Link>
                   </DropdownMenuItem>
                 ))}
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem className="focus:bg-transparent">
                   <div className="flex w-full items-center justify-center">
                     <ThemeSwitcher />
                   </div>
