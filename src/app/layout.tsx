@@ -6,7 +6,7 @@ import { MainLayout } from '@/components/layout/main-layout';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Personal Canvas',
+  title: 'Shail Vania',
   description: 'A personal portfolio website.',
 };
 

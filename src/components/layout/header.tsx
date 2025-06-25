@@ -41,7 +41,7 @@ export function Header() {
         <div className="flex flex-1 justify-start">
           <Link href="/" className="flex items-center space-x-2">
             <Code className="h-8 w-8" />
-            <span className="font-bold sm:inline-block">Personal Canvas</span>
+            <span className="font-bold sm:inline-block">Shail Vania</span>
           </Link>
         </div>
 

@@ -17,7 +17,7 @@ export default function Resume() {
                 </CardHeader>
                 <CardContent>
                     <Button asChild>
-                        <a href="/resume.pdf" download="YourName_Resume.pdf">
+                        <a href="/resume.pdf" download="ShailVania_Resume.pdf">
                             <Download className="mr-2 h-4 w-4" />
                             Download PDF
                         </a>

@@ -6,8 +6,8 @@ export default function About() {
     <div className="space-y-12">
       <div className="flex flex-col items-center gap-8 md:flex-row">
         <Avatar className="h-32 w-32">
-          <AvatarImage src="https://placehold.co/200x200.png" alt="Your Name" data-ai-hint="portrait person" />
-          <AvatarFallback>YN</AvatarFallback>
+          <AvatarImage src="https://placehold.co/200x200.png" alt="Shail Vania" data-ai-hint="portrait person" />
+          <AvatarFallback>SV</AvatarFallback>
         </Avatar>
         <div className="flex-1 text-center md:text-left">
           <h1 className="font-headline text-5xl font-bold md:text-6xl">About Me</h1>
