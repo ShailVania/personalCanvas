@@ -203,7 +203,7 @@ const Sidebar = React.forwardRef<
           <SheetContent
             data-sidebar="sidebar"
             data-mobile="true"
-            className="w-[--sidebar-width] bg-sidebar/40 backdrop-blur-xl p-0 text-sidebar-foreground"
+            className="w-[--sidebar-width] bg-white/20 dark:bg-black/20 backdrop-blur-xl p-0 text-sidebar-foreground"
             style={
               {
                 "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -243,7 +243,7 @@ const Sidebar = React.forwardRef<
         />
         <div
           className={cn(
-            "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear lg:flex",
+            "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
             side === "left"
               ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
               : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
@@ -257,7 +257,7 @@ const Sidebar = React.forwardRef<
         >
           <div
             data-sidebar="sidebar"
-            className="group/sidebar glass-border flex h-full w-full flex-col bg-sidebar/40 backdrop-blur-xl group-data-[variant=floating]:rounded-2xl group-data-[variant=floating]:border group-data-[variant=floating]:border-transparent group-data-[variant=floating]:shadow"
+            className="group/sidebar glass-border flex h-full w-full flex-col bg-white/20 dark:bg-black/20 backdrop-blur-xl group-data-[variant=floating]:rounded-2xl group-data-[variant=floating]:border group-data-[variant=floating]:border-transparent group-data-[variant=floating]:shadow"
           >
             {children}
           </div>
@@ -573,7 +573,7 @@ const SidebarMenuButton = React.forwardRef<
         data-sidebar="menu-button"
         data-size={size}
         data-active={isActive}
-        className={cn(sidebarMenuButtonVariants({ variant, size }), className, isActive && "glass-border")}
+        className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
         {...props}
       />
     )
