@@ -11,7 +11,7 @@ export default function Home() {
           {"Hi, I'm Shail".split('').map((char, index) => (
             <span
               key={index}
-              className="cursor-pointer rounded-md p-0.5 transition-all duration-200 hover:!bg-primary hover:!text-primary-foreground hover:scale-110"
+              className="cursor-pointer rounded-md transition-all duration-200 hover:!bg-primary hover:!text-primary-foreground hover:scale-110"
             >
               {char === ' ' ? '\u00A0' : char}
             </span>
