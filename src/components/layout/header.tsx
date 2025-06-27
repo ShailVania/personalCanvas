@@ -12,6 +12,8 @@ import {
   FileText,
   Mail,
   Menu,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
 import { ThemeSwitcher } from '../theme-switcher';
 import { cn } from '@/lib/utils';
@@ -22,6 +24,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTheme } from 'next-themes';
+import { useAudio } from '@/hooks/use-audio';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -34,11 +37,18 @@ const navItems = [
 export function Header() {
   const pathname = usePathname();
   const { theme } = useTheme();
+  const { isMuted, toggleMute } = useAudio();
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  const MuteButton = (
+    <Button variant="ghost" size="icon" onClick={toggleMute} aria-label="Toggle Sound">
+      {isMounted && isMuted ? <VolumeX /> : <Volume2 />}
+    </Button>
+  );
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -76,7 +86,8 @@ export function Header() {
         
         {/* Right section: Theme Switcher and Mobile Menu */}
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-2">
+            {MuteButton}
             <ThemeSwitcher />
           </div>
 
@@ -109,9 +120,10 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
-                <DropdownMenuItem className="focus:bg-transparent">
-                  <div className="flex w-full items-center justify-center">
+                <DropdownMenuItem className="focus:bg-transparent" onSelect={(e) => e.preventDefault()}>
+                  <div className="flex w-full items-center justify-between">
                     <ThemeSwitcher />
+                    {MuteButton}
                   </div>
                 </DropdownMenuItem>
               </DropdownMenuContent>

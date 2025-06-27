@@ -5,9 +5,11 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Switch } from "@/components/ui/switch"
+import { useAudio } from "@/hooks/use-audio"
 
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme()
+  const { playSound } = useAudio()
   const [isMounted, setIsMounted] = React.useState(false)
 
   React.useEffect(() => {
@@ -21,7 +23,9 @@ export function ThemeSwitcher() {
   const isDark = theme === "dark"
 
   const toggleTheme = () => {
-    setTheme(isDark ? "light" : "dark")
+    const newTheme = isDark ? "light" : "dark"
+    setTheme(newTheme)
+    playSound(newTheme === 'dark' ? 'dark-on' : 'light-on')
   }
 
   return (

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { MainLayout } from '@/components/layout/main-layout';
 import { ThemeProvider } from '@/components/theme-provider';
+import { AudioProvider } from '@/hooks/use-audio';
 
 export const metadata: Metadata = {
   title: 'Shail Vania',
@@ -27,10 +28,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MainLayout>
-            {children}
-          </MainLayout>
-          <Toaster />
+          <AudioProvider>
+            <MainLayout>
+              {children}
+            </MainLayout>
+            <Toaster />
+          </AudioProvider>
         </ThemeProvider>
       </body>
     </html>
