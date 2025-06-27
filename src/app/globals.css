@@ -55,6 +55,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Custom Text Selection Style */
+  ::selection {
+    background: #fef08a; /* highlighter-yellow */
+    color: #1e293b; /* slate-800 */
+  }
+  ::-moz-selection {
+    background: #fef08a; /* highlighter-yellow */
+    color: #1e293b; /* slate-800 */
+  }
 }
 
 /* Custom Scrollbar Styles */
