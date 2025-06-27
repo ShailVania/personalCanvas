@@ -6,7 +6,7 @@ export default function About() {
     <div className="space-y-12">
       <div className="flex flex-col items-center gap-8 md:flex-row">
         <Avatar className="h-32 w-32">
-          <AvatarImage src="https://placehold.co/128x128.png" alt="Shail Vania" data-ai-hint="avatar portrait" />
+          <AvatarImage src="/RQND Pro.gif" alt="Shail Vania" data-ai-hint="avatar portrait" />
           <AvatarFallback>SV</AvatarFallback>
         </Avatar>
         <div className="flex-1 text-center md:text-left">
