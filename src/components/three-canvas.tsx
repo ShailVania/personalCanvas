@@ -71,9 +71,9 @@ export function ThreeCanvas({ letter, count = 1, sceneType = 'default' }: { lett
                     allShapes.push(shape);
                 };
 
-                for (let i = 0; i < 100; i++) createShape(cubeGeometry);
-                for (let i = 0; i < 100; i++) createShape(sphereGeometry);
-                for (let i = 0; i < 150; i++) createShape(donutGeometry);
+                for (let i = 0; i < 30; i++) createShape(cubeGeometry);
+                for (let i = 0; i < 30; i++) createShape(sphereGeometry);
+                for (let i = 0; i < 40; i++) createShape(donutGeometry);
 
                 allShapes.forEach((shape) => {
                     const directionX = Math.random() < 0.5 ? "+=" : "-=";
