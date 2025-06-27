@@ -11,9 +11,9 @@ export function Footer() {
           variant="ghost"
           size="icon"
           asChild
-          className="text-muted-foreground transition-all duration-300 hover:bg-transparent hover:text-primary hover:scale-125 hover:drop-shadow-[0_0_4px_hsl(var(--primary))]"
+          className="text-muted-foreground transition-all duration-300 hover:bg-transparent hover:text-primary hover:scale-125 hover:drop-shadow-[0_0_4px_hsl(var(--primary))] [&_svg]:size-6"
         >
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/ShailVania" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <Github />
           </a>
         </Button>
@@ -21,9 +21,9 @@ export function Footer() {
           variant="ghost"
           size="icon"
           asChild
-          className="text-muted-foreground transition-all duration-300 hover:bg-transparent hover:text-primary hover:scale-125 hover:drop-shadow-[0_0_4px_hsl(var(--primary))]"
+          className="text-muted-foreground transition-all duration-300 hover:bg-transparent hover:text-primary hover:scale-125 hover:drop-shadow-[0_0_4px_hsl(var(--primary))] [&_svg]:size-6"
         >
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <a href="http://www.youtube.com/@ShailVania" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <Youtube />
           </a>
         </Button>
@@ -31,9 +31,9 @@ export function Footer() {
           variant="ghost"
           size="icon"
           asChild
-          className="text-muted-foreground transition-all duration-300 hover:bg-transparent hover:text-primary hover:scale-125 hover:drop-shadow-[0_0_4px_hsl(var(--primary))]"
+          className="text-muted-foreground transition-all duration-300 hover:bg-transparent hover:text-primary hover:scale-125 hover:drop-shadow-[0_0_4px_hsl(var(--primary))] [&_svg]:size-6"
         >
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/shailvania/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin />
           </a>
         </Button>
