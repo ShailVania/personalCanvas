@@ -49,6 +49,16 @@ export default function Resume() {
                             <li>Maintained high customer satisfaction through effective problem resolution.</li>
                         </ul>
                     </div>
+                    <div>
+                        <h3 className="text-xl font-semibold">Web Developer - Webbions Technologies</h3>
+                        <p className="text-sm text-muted-foreground">Feb 2020 - Feb 2021 | Ahmedabad, GJ, India</p>
+                        <ul className="mt-2 list-disc pl-5 text-muted-foreground">
+                            <li>Technologies: React, HTML, CSS, Django.</li>
+                            <li>Assisted in designing, developing and maintaining websites and web-based applications.</li>
+                            <li>Developed rich interfaces using HTML, CSS, and React, leading to a 25% increase in user engagement.</li>
+                            <li>Developed and implemented RESTful APIs using Django to support front-end functionalities.</li>
+                        </ul>
+                    </div>
                 </CardContent>
             </Card>
 
