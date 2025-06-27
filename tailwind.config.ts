@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Georama', 'sans-serif'],
-        headline: ['Georama', 'sans-serif'],
+        body: ['futura-pt', 'sans-serif'],
+        headline: ['futura-pt', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
