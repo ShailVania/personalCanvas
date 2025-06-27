@@ -11,14 +11,15 @@ import {
   Briefcase,
   FileText,
   Mail,
-  Menu,
-  CodeXml,
 } from 'lucide-react';
 import { ThemeSwitcher } from '../theme-switcher';
 import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
@@ -48,10 +49,10 @@ export function Header() {
         {/* Left section: Logo */}
         <div className="flex flex-1 justify-start">
           <Link href="/" className="flex items-center space-x-2">
-            {isMounted && theme === 'dark' ? (
-              <CodeXml className="h-8 w-8" />
-            ) : (
-              <Code className="h-8 w-8" />
+            {isMounted && theme === 'dark' ? ( 
+              <img src="/darkIcon.svg" alt="Dark Code Icon" className="h-8 w-8" />
+            ) : ( 
+              <img src="/lightIcon.svg" alt="Light Code Icon" className="h-8 w-8" />
             )}
             <span className="font-bold sm:inline-block">Shail Vania</span>
           </Link>
@@ -84,8 +85,8 @@ export function Header() {
           <div className="md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu />
+                <Button variant="outline" size="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </DropdownMenuTrigger>
