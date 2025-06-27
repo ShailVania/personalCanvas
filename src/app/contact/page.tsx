@@ -5,7 +5,7 @@ import { Mail } from 'lucide-react';
 export default function Contact() {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center text-center">
-      <ThreeCanvas letter="@" />
+      <ThreeCanvas letter="@" count={20} />
       <div className="z-10 flex w-full max-w-3xl flex-col items-center rounded-2xl p-8 shadow-2xl shadow-primary/20 backdrop-blur-xl transition-shadow duration-300 hover:shadow-primary/40 md:p-12">
         <div className="w-full text-center">
           <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">Contact Me</h1>
