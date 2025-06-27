@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/qrx6ywy.css" />
       </head>
-      <body className={cn("font-body font-normal antialiased")}>
+      <body className={cn("font-body font-light antialiased")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

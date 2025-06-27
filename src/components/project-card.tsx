@@ -29,7 +29,7 @@ export function ProjectCard({ title, description, imageUrl, projectUrl, tags, im
         </div>
       </CardHeader>
       <CardContent className="flex-1 p-6">
-        <CardTitle className="font-headline text-2xl">{title}</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <p className="mt-2 text-muted-foreground">{description}</p>
       </CardContent>
       <CardFooter className="flex-col items-start gap-4 p-6 pt-0">
