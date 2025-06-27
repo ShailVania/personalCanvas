@@ -12,6 +12,7 @@ import {
   FileText,
   Mail,
   Menu,
+  CodeXml,
 } from 'lucide-react';
 import { ThemeSwitcher } from '../theme-switcher';
 import { cn } from '@/lib/utils';
@@ -21,6 +22,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useTheme } from 'next-themes';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -32,6 +34,12 @@ const navItems = [
 
 export function Header() {
   const pathname = usePathname();
+  const { theme } = useTheme();
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -40,7 +48,11 @@ export function Header() {
         {/* Left section: Logo */}
         <div className="flex flex-1 justify-start">
           <Link href="/" className="flex items-center space-x-2">
-            <Code className="h-8 w-8" />
+            {isMounted && theme === 'dark' ? (
+              <CodeXml className="h-8 w-8" />
+            ) : (
+              <Code className="h-8 w-8" />
+            )}
             <span className="font-bold sm:inline-block">Shail Vania</span>
           </Link>
         </div>
