@@ -27,6 +27,22 @@ export default function Resume() {
 
             <Card className="transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
                 <CardHeader>
+                    <CardTitle>Certifications</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    <div>
+                        <h3 className="text-xl font-semibold">AWS Certified Cloud Practitioner</h3>
+                        <p className="text-sm text-muted-foreground">Issued: Jan 2024</p>
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-semibold">Google Professional Cloud Developer</h3>
+                        <p className="text-sm text-muted-foreground">Issued: Mar 2023</p>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <Card className="transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
+                <CardHeader>
                     <CardTitle>Work Experience</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
