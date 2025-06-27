@@ -8,10 +8,10 @@ export default function Home() {
       <ThreeCanvas letter="<s/v>" />
       <div className="z-10">
         <h1 className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text font-headline text-5xl font-semibold italic text-transparent md:text-7xl">
-          A Creative Digital Canvas
+          Hi, I'm Shail
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          I'm a developer and designer, passionate about building beautiful and interactive web experiences. This is my digital playground.
+        <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
+          Front-end Developer | Software Developer | NextGen CTO | Machine Learning and AI Enthusiast
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild size="lg">
