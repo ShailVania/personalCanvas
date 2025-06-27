@@ -14,9 +14,9 @@ export default function Contact() {
           </p>
         </div>
         <Button asChild size="lg" className="mt-8">
-          <a href="mailto:shailvania@gmail.com">
+          <a href="mailto:vaniashail@gmail.com">
             <Mail className="mr-2 h-5 w-5" />
-            shailvania@gmail.com
+            vaniashail@gmail.com
           </a>
         </Button>
       </div>
