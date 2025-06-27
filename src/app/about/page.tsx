@@ -27,8 +27,10 @@ export default function About() {
         </Card>
         
         <div className="space-y-6">
-          <h2 className="text-center font-headline text-4xl font-semibold italic">My Tech Stack</h2>
-          <p className="text-center text-lg text-muted-foreground">Technologies I love to work with.</p>
+          <Card className="transform-gpu p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30 md:p-8">
+            <h2 className="font-headline text-4xl font-semibold italic">My Tech Stack</h2>
+            <p className="mt-2 text-lg text-muted-foreground">Technologies I love to work with.</p>
+          </Card>
           <TechShowcase />
         </div>
       </div>
