@@ -1,6 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Download } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
+import Link from 'next/link';
+
+const certifications = [
+    { name: 'React Basics - Meta', url: 'https://coursera.org/share/59e830e96267f45347f60af74f350bef' },
+    { name: 'Introduction to Front-End Development - Meta', url: 'https://coursera.org/share/96b54a1d36359b53814320170cfd89dd' },
+    { name: 'Programming with JavaScript - Meta', url: 'https://coursera.org/share/5e00533200bb8e1f9d9583d0bf30fd11' },
+    { name: 'HTML and CSS in depth - Meta', url: 'https://coursera.org/share/a799ecef5061b4344fbf1d71b3a1e5ed' },
+    { name: 'Version Control - Meta', url: 'https://coursera.org/share/3550a749c86ca45e3c9bfc4f97fe10ea' },
+    { name: 'AWS Cloud Quest: Cloud Practitioner - AWS', url: 'https://www.credly.com/badges/9f1ef6d6-fe75-4a3e-9ee2-2141e0f90ea2' },
+    { name: 'AWS Cloud Computing 101 - AWS Training and Education', url: 'https://www.credly.com/badges/b94c4ebb-1938-4fd1-b20f-4ad01c2d5805' },
+    { name: 'Ultimate AWS Certified Cloud Practitioner CLF-C02 - Udemy', url: 'https://www.udemy.com/certificate/UC-84487caf-7c90-4af5-972b-16c86b32e188/' },
+    { name: 'NextGen CTO - EPICentre (University of Windsor)', url: 'https://ca.badgr.com/public/assertions/rKCqgFMnRu67mNrqKJMI0Q' },
+    { name: 'The Joy of Computing Using Python - NPTEL', url: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL20CS35S1PC319722' },
+    { name: 'Ethical Hacking - Udemy', url: 'https://www.udemy.com/certificate/UC-09D53AIY/' }
+];
 
 export default function Resume() {
     return (
@@ -29,15 +44,22 @@ export default function Resume() {
                 <CardHeader>
                     <CardTitle>Certifications</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                    <div>
-                        <h3 className="font-headline text-xl font-semibold italic">AWS Certified Cloud Practitioner</h3>
-                        <p className="text-sm text-muted-foreground">Issued: Jan 2024</p>
-                    </div>
-                    <div>
-                        <h3 className="font-headline text-xl font-semibold italic">Google Professional Cloud Developer</h3>
-                        <p className="text-sm text-muted-foreground">Issued: Mar 2023</p>
-                    </div>
+                <CardContent>
+                    <ul className="list-disc space-y-2 pl-5">
+                        {certifications.map((cert) => (
+                            <li key={cert.name}>
+                                <Link
+                                    href={cert.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+                                >
+                                    <span className="font-semibold italic">{cert.name}</span>
+                                    <ExternalLink className="h-4 w-4" />
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </CardContent>
             </Card>
 
