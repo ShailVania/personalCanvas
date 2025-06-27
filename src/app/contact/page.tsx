@@ -1,12 +1,13 @@
 import { ThreeCanvas } from '@/components/three-canvas';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { Mail } from 'lucide-react';
 
 export default function Contact() {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center text-center">
       <ThreeCanvas sceneType="contact" />
-      <div className="z-10 flex w-full max-w-3xl flex-col items-center rounded-2xl p-8 shadow-2xl shadow-primary/20 backdrop-blur-xl transition-shadow duration-300 hover:shadow-primary/40 md:p-12">
+      <Card className="z-10 flex w-full max-w-3xl transform-gpu flex-col items-center p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30 md:p-12">
         <div className="w-full text-center">
           <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">Contact Me</h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-foreground">
@@ -19,7 +20,7 @@ export default function Contact() {
             vaniashail@gmail.com
           </a>
         </Button>
-      </div>
+      </Card>
     </div>
   );
 }
