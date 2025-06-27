@@ -52,10 +52,10 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                'transition-colors',
+                'font-bold transition-colors',
                 pathname === item.href
-                  ? 'font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
-                  : 'text-foreground/60 hover:font-bold hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:bg-clip-text hover:text-transparent'
+                  ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                  : 'text-foreground/60 hover:bg-gradient-to-r hover:from-primary hover:to-cyan-400 hover:bg-clip-text hover:text-transparent'
               )}
             >
               {item.label}
@@ -87,11 +87,11 @@ export function Header() {
                           'group-hover:text-primary'
                       )} />
                       <span className={cn(
-                          'transition-colors',
+                          'font-bold transition-colors',
                           pathname === item.href
-                              ? 'font-bold bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                              ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
                               : 'text-foreground/60',
-                          'group-hover:font-bold group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
+                          'group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
                       )}>
                           {item.label}
                       </span>
