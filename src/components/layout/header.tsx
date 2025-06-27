@@ -12,7 +12,6 @@ import {
   FileText,
   Mail,
   Menu,
-  CodeXml,
 } from 'lucide-react';
 import { ThemeSwitcher } from '../theme-switcher';
 import { cn } from '@/lib/utils';
@@ -49,9 +48,9 @@ export function Header() {
         <div className="flex flex-1 justify-start">
           <Link href="/" className="flex items-center space-x-2">
             {isMounted && theme === 'dark' ? (
-              <CodeXml className="h-8 w-8" />
+              <img src="/darkIcon.svg" alt="Dark Icon" className="h-8 w-8" />
             ) : (
-              <Code className="h-8 w-8" />
+              <img src="/lightIcon.svg" alt="Light Icon" className="h-8 w-8" />
             )}
             <span className="font-bold sm:inline-block">Shail Vania</span>
           </Link>
