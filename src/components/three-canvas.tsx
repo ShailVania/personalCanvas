@@ -44,7 +44,7 @@ export function ThreeCanvas({ letter, count = 1 }: { letter?: string; count?: nu
 
     const addRandomizedShape = (geometry: THREE.BufferGeometry) => {
       const shape = new THREE.Mesh(geometry, material);
-      const scale = Math.random() * 0.4 + 0.1;
+      const scale = Math.random() * 0.6 + 0.3; // Increased scale for better visibility
       shape.scale.set(scale, scale, scale);
       shape.position.set(
         (Math.random() - 0.5) * 25,
