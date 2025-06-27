@@ -15,7 +15,7 @@ export default function Home() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild size="lg">
-            <Link href="/projects">View Projects</Link>
+            <Link href="/resume">Resume</Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
             <Link href="/contact">Contact Me</Link>
