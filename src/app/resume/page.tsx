@@ -32,12 +32,12 @@ export default function Resume() {
                 <CardContent className="space-y-6">
                     <div>
                         <h3 className="text-xl font-semibold">Software Engineer - DevTech Solutions</h3>
-                        <p className="text-sm text-muted-foreground">Jun 2024 - Jul 2024</p>
+                        <p className="text-sm text-muted-foreground">June 2024 - July 2024 | Kitchener, ON, Canada (Remote)</p>
                         <ul className="mt-2 list-disc pl-5 text-muted-foreground">
                             <li>Technologies: React, Node.js, TailwindCSS, JIRA, Git.</li>
-                            <li>Developed and Maintained the HYDEX website, using React for the front end and Node.js for the back end, with TailwindCSS for responsive design, all while ensuring global availability through AWS services.</li>
-                            <li>Developed advanced functionalities in NFT, making it possible to create, manage, and trade within the platform, which greatly fueled the development and improvement of the HYTOPIA ecosystem in providing an experience based on over 1000 satisfied users and advanced functionalities for the betterment of the platform.</li>
-                            <li>Ensured effective version control using Git and optimized project management with JIRA for a smooth workflow and timely delivery of high-quality features and updates.</li>
+                            <li>Developed and maintained the HYDEX website using React, Node.js, and Tailwind, ensuring global availability on AWS.</li>
+                            <li>Engineered advanced NFT functionalities for the HYTOPIA ecosystem, serving over 1000 users.</li>
+                            <li>Utilized Git and JIRA to manage project workflows and ensure timely delivery of high-quality features.</li>
                         </ul>
                     </div>
                     <div>
