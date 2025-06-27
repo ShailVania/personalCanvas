@@ -1,5 +1,6 @@
 import { ProjectCard } from '@/components/project-card';
 import { ThreeCanvas } from '@/components/three-canvas';
+import { Card } from '@/components/ui/card';
 
 const projects = [
   {
@@ -41,10 +42,10 @@ export default function Projects() {
     <div className="relative w-full">
       <ThreeCanvas sceneType="contact" />
       <div className="relative z-10 space-y-8">
-        <div className="text-center">
+        <Card className="transform-gpu p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30 md:p-12">
           <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">My Projects</h1>
           <p className="mt-4 text-lg text-muted-foreground">A selection of my work.</p>
-        </div>
+        </Card>
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
