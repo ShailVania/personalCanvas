@@ -48,14 +48,6 @@ export function ThreeCanvas({ letter, count = 1, sceneType = 'default' }: { lett
         fontLoader.load(
             'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/fonts/helvetiker_bold.typeface.json',
             (font) => {
-                const textGeometry = new TextGeometry('Shail Vania', {
-                    font: font, size: 0.5, depth: 0.2, curveSegments: 12, bevelEnabled: true, bevelThickness: 0.03, bevelSize: 0.02, bevelOffset: 0, bevelSegments: 5
-                });
-                textGeometry.center();
-                const textMaterial = new THREE.MeshStandardMaterial({ color: objectColor, metalness: 0.8, roughness: 0.1 });
-                const text = new THREE.Mesh(textGeometry, textMaterial);
-                scene.add(text);
-
                 const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
                 const sphereGeometry = new THREE.SphereGeometry(0.3, 16, 16);
                 const cubeGeometry = new THREE.BoxGeometry(0.3, 0.3, 0.3);
