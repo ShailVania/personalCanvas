@@ -66,10 +66,14 @@ export default function Resume() {
                 <CardHeader>
                     <CardTitle>Education</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-6">
                      <div>
-                        <h3 className="text-xl font-semibold">B.Sc. in Computer Science</h3>
-                        <p className="text-sm text-muted-foreground">University of Technology - 2018</p>
+                        <h3 className="text-xl font-semibold">University of Windsor, Master of Applied Computing Science</h3>
+                        <p className="text-sm text-muted-foreground">May 2022 - Aug 2023 | Windsor, ON, Canada</p>
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-semibold">Kadi Sarva Vishwavidyalaya, Bachelor of Engineering in Information Technology</h3>
+                        <p className="text-sm text-muted-foreground">May 2017 - May 2021 | Gandhinagar, GJ, India</p>
                     </div>
                 </CardContent>
             </Card>
