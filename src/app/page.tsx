@@ -7,7 +7,7 @@ export default function Home() {
     <div className="relative flex h-full flex-col items-center justify-center text-center">
       <ThreeCanvas letter="<s/v>" />
       <div className="z-10">
-        <h1 className="font-headline text-5xl font-bold md:text-7xl">
+        <h1 className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text font-headline text-5xl font-bold text-transparent md:text-7xl">
           A Creative Digital Canvas
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
