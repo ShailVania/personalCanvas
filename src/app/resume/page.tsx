@@ -41,11 +41,12 @@ export default function Resume() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-xl font-semibold">Junior Developer - Web Solutions Inc.</h3>
-                        <p className="text-sm text-muted-foreground">Jun 2018 - Dec 2020</p>
+                        <h3 className="text-xl font-semibold">Apple Technical Support - Kelly Services (Kelly Connect)</h3>
+                        <p className="text-sm text-muted-foreground">Dec 2023 - Mar 2024 | Kitchener, ON, Canada</p>
                         <ul className="mt-2 list-disc pl-5 text-muted-foreground">
-                            <li>Developed and maintained client websites.</li>
-                            <li>Collaborated with designers to implement new features.</li>
+                            <li>Provided high-level technical support for Apple products (iOS, macOS, hardware, software).</li>
+                            <li>Troubleshot and resolved complex software and hardware issues.</li>
+                            <li>Maintained high customer satisfaction through effective problem resolution.</li>
                         </ul>
                     </div>
                 </CardContent>
