@@ -20,7 +20,7 @@ const certifications = [
 
 export default function Resume() {
     return (
-        <div className="relative w-full">
+        <div className="relative flex w-full flex-col items-center">
             <ThreeCanvas sceneType="contact" />
             <div className="relative z-10 w-full max-w-3xl space-y-8">
                 <div className="text-center">
