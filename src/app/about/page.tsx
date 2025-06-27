@@ -15,7 +15,7 @@ export default function About() {
               <AvatarFallback>SV</AvatarFallback>
             </Avatar>
             <div className="flex-1 text-center md:text-left">
-              <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">About Me</h1>
+              <h1 className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text font-headline text-5xl font-semibold italic text-transparent md:text-6xl">About Me</h1>
               <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
                 I am a passionate software engineer with a love for creating dynamic and user-friendly web applications. My journey in tech started with a simple curiosity about how websites worked, and it has since blossomed into a full-fledged career. I thrive on challenges and am constantly learning new technologies to push the boundaries of what's possible on the web.
               </p>

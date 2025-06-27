@@ -72,7 +72,7 @@ export default function Resume() {
                     </CardHeader>
                     <CardContent className="space-y-6">
                         <div>
-                            <h3 className="font-headline text-xl font-semibold italic">Software Engineer - DevTech Solutions</h3>
+                            <h3 className="font-headline text-xl font-semibold italic">Software Engineer</h3>
                             <p className="text-sm text-muted-foreground">June 2024 - July 2024 | Kitchener, ON, Canada (Remote)</p>
                             <ul className="mt-2 list-disc pl-5 text-muted-foreground">
                                 <li>Technologies: React, Node.js, TailwindCSS, JIRA, Git.</li>
@@ -82,7 +82,7 @@ export default function Resume() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-headline text-xl font-semibold italic">Apple Technical Support - Kelly Services (Kelly Connect)</h3>
+                            <h3 className="font-headline text-xl font-semibold italic">Apple Technical Support Representative</h3>
                             <p className="text-sm text-muted-foreground">Dec 2023 - Mar 2024 | Kitchener, ON, Canada</p>
                             <ul className="mt-2 list-disc pl-5 text-muted-foreground">
                                 <li>Provided high-level technical support for Apple products (iOS, macOS, hardware, software).</li>
@@ -91,7 +91,7 @@ export default function Resume() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-headline text-xl font-semibold italic">Web Developer - Webbions Technologies</h3>
+                            <h3 className="font-headline text-xl font-semibold italic">Web Developer</h3>
                             <p className="text-sm text-muted-foreground">Feb 2020 - Feb 2021 | Ahmedabad, GJ, India</p>
                             <ul className="mt-2 list-disc pl-5 text-muted-foreground">
                                 <li>Technologies: React, HTML, CSS, Django.</li>
