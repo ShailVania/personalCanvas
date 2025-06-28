@@ -75,7 +75,7 @@ export function Header() {
   }, []);
 
   const MuteButton = (
-    <Button variant="ghost" size="icon" onClick={toggleMute} aria-label="Toggle Sound" className="hover:bg-transparent">
+    <Button variant="ghost" size="icon" onClick={toggleMute} aria-label="Toggle Sound" className="hover:bg-transparent hover:text-inherit">
       {isMounted && isMuted ? <VolumeX /> : <Volume2 />}
     </Button>
   );
