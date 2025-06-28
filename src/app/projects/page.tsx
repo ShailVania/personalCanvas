@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Q-win',
     description: 'An innovative event management app made for University of Windsor',
-    imageUrl: '/qwin.svg',
+    imageUrl: 'https://placehold.co/600x400.png',
     animatedImageUrl: '/qwin.gif',
     projectUrl: 'https://qwin.web.app/',
     tags: ['React', 'Firebase', 'TypeScript'],
@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'Coming Soon',
     description: 'More projects are in the works! Check back later.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1503980850968-b7c3b4af0e05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1bmRlciUyMGNvbnN0cnVjdGlvbnxlbnwwfHx8fDE3NTExMTE1MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     projectUrl: '#',
     tags: ['In Progress'],
     imageHint: 'under construction wrench',
