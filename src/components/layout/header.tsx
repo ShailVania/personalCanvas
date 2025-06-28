@@ -126,10 +126,10 @@ export function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-[80vw] max-w-xs p-4">
-                <div className="flex flex-col items-center justify-center space-y-4">
+              <DropdownMenuContent align="end" className="w-[90vw] max-w-md p-6">
+                <div className="flex flex-col items-center justify-center space-y-6">
                     {navItems.map((item) => (
-                      <DropdownMenuItem key={item.href} asChild className="w-full cursor-pointer text-xl">
+                      <DropdownMenuItem key={item.href} asChild className="w-full cursor-pointer text-xl focus:bg-transparent">
                         <Link href={item.href} className="group flex w-full items-center justify-center gap-4" onClick={() => setIsMenuOpen(false)}>
                             <item.icon className={cn(
                               'h-7 w-7',
