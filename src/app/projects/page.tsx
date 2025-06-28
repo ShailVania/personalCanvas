@@ -46,11 +46,10 @@ export default function Projects() {
           <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">My Projects</h1>
           <p className="mt-4 text-lg text-muted-foreground">A selection of my work.</p>
         </Card>
-        <div className="grid place-items-center py-16">
-          <Card className="p-8 text-center">
-            <h2 className="font-headline text-3xl font-semibold italic">More Projects Coming Soon</h2>
-            <p className="mt-4 text-muted-foreground">I'm currently working on some exciting new projects. Please check back later!</p>
-          </Card>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </div>
     </div>
