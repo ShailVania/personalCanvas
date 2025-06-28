@@ -20,9 +20,6 @@ import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
@@ -149,7 +146,7 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
-                <DropdownMenuItem className="focus:bg-transparent" onSelect={(e) => e.preventDefault()}>
+                <DropdownMenuItem className="cursor-default focus:bg-transparent hover:bg-transparent" onSelect={(e) => e.preventDefault()}>
                   <div className="flex w-full items-center justify-between">
                     <ThemeSwitcher />
                     {MuteButton}
