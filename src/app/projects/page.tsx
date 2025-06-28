@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'Coming Soon',
     description: 'More projects are in the works! Check back later.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1625470496744-a01bf36a262f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx1bmRlciUyMGNvbnN0cnVjdGlvbnxlbnwwfHx8fDE3NTExMTE1MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     projectUrl: '#',
     tags: ['In Progress'],
     imageHint: 'under construction blueprint',
