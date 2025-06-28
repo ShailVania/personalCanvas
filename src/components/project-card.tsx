@@ -1,30 +1,42 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from './ui/button';
 import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
 
 type ProjectCardProps = {
   title: string;
   description: string;
   imageUrl: string;
+  animatedImageUrl?: string;
   projectUrl: string;
   tags: string[];
   imageHint: string;
 };
 
-export function ProjectCard({ title, description, imageUrl, projectUrl, tags, imageHint }: ProjectCardProps) {
+export function ProjectCard({ title, description, imageUrl, animatedImageUrl, projectUrl, tags, imageHint }: ProjectCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const currentImage = isHovered && animatedImageUrl ? animatedImageUrl : imageUrl;
+  
   return (
-    <Card className="flex h-full flex-col transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30">
+    <Card 
+      className="flex h-full flex-col transition-all duration-300 transform-gpu hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <CardHeader className="p-0 rounded-t-2xl overflow-hidden">
         <div className="relative h-48 w-full">
           <Image
-            src={imageUrl}
+            src={currentImage}
             alt={title}
             fill
             className="object-cover"
             data-ai-hint={imageHint}
+            unoptimized={currentImage.endsWith('.gif')}
           />
         </div>
       </CardHeader>

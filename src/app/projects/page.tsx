@@ -4,12 +4,13 @@ import { Card } from '@/components/ui/card';
 
 const projects = [
   {
-    title: 'Project Alpha',
-    description: 'An innovative web application that leverages AI to create stunning visuals. Built with Next.js and Three.js.',
+    title: 'Q-win',
+    description: 'An innovative event management app made for University of Windsor',
     imageUrl: 'https://placehold.co/600x400.png',
-    projectUrl: '#',
-    tags: ['Next.js', 'Three.js', 'AI'],
-    imageHint: 'abstract technology',
+    animatedImageUrl: '/qwin.gif',
+    projectUrl: 'https://qwin.web.app/',
+    tags: ['React', 'Firebase', 'TypeScript'],
+    imageHint: 'computer with project website',
   },
   {
     title: 'Portfolio Canvas',
