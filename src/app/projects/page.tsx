@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Q-win',
     description: 'An innovative event management app made for University of Windsor',
-    imageUrl: 'qwin.svg',
+    imageUrl: 'https://placehold.co/600x400.png',
     animatedImageUrl: '/qwin.gif',
     projectUrl: 'https://qwin.web.app/',
     tags: ['React', 'Firebase', 'TypeScript'],
@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Trek-Tix',
     description: 'An adventure ticket booking platform for nearby experiences.',
-    imageUrl: '/trekTixNew.svg',
+    imageUrl: 'https://placehold.co/600x400.png',
     animatedImageUrl: '/trekTix.gif',
     projectUrl: 'https://github.com/ShailVania/Adventure-Event-Booking',
     tags: ['Python', 'Django'],
@@ -65,10 +65,12 @@ export default function Projects() {
           <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">My Projects</h1>
           <p className="mt-4 text-lg text-muted-foreground">A selection of my work.</p>
         </Card>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ export function ProjectCard({ title, description, imageUrl, animatedImageUrl, pr
       onMouseLeave={() => setIsHovered(false)}
     >
       <CardHeader className="p-0 rounded-t-2xl overflow-hidden">
-        <div className="relative h-48 w-full">
+        <div className="relative w-full aspect-video">
           <Image
             src={imageUrl}
             alt={title}
