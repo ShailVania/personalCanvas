@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Q-win',
     description: 'An innovative event management app made for University of Windsor',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'qwin.svg',
     animatedImageUrl: '/qwin.gif',
     projectUrl: 'https://qwin.web.app/',
     tags: ['React', 'Firebase', 'TypeScript'],
@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Trek-Tix',
     description: 'An adventure ticket booking platform for nearby experiences.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'trekTixNew.svg',
     animatedImageUrl: '/trekTix.gif',
     projectUrl: 'https://github.com/ShailVania/Adventure-Event-Booking',
     tags: ['Python', 'Django'],
