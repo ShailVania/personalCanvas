@@ -37,11 +37,38 @@ const navItems = [
   { href: '/contact', label: 'Contact', icon: Mail },
 ];
 
+const AnimatedHamburgerIcon = ({ open }: { open: boolean }) => (
+  <div
+    className="relative h-6 w-6"
+    aria-label={open ? 'Close menu' : 'Open menu'}
+  >
+    <span
+      className={cn(
+        'absolute left-0 block h-0.5 w-full bg-current transition-all duration-300 ease-in-out',
+        open ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-[6px]'
+      )}
+    />
+    <span
+      className={cn(
+        'absolute left-0 top-1/2 block h-0.5 w-full -translate-y-1/2 bg-current transition-opacity duration-300 ease-in-out',
+        open ? 'opacity-0' : 'opacity-100'
+      )}
+    />
+    <span
+      className={cn(
+        'absolute left-0 block h-0.5 w-full bg-current transition-all duration-300 ease-in-out',
+        open ? 'top-1/2 -translate-y-1/2 -rotate-45' : 'bottom-[6px]'
+      )}
+    />
+  </div>
+);
+
 export function Header() {
   const pathname = usePathname();
   const { theme } = useTheme();
   const { isMuted, toggleMute } = useAudio();
   const [isMounted, setIsMounted] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
     setIsMounted(true);
@@ -95,10 +122,10 @@ export function Header() {
           </div>
 
           <div className="md:hidden">
-            <DropdownMenu>
+            <DropdownMenu onOpenChange={setIsMenuOpen}>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+                <Button variant="ghost" size="icon">
+                  <AnimatedHamburgerIcon open={isMenuOpen} />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </DropdownMenuTrigger>
