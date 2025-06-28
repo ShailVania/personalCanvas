@@ -20,7 +20,7 @@ export default function About() {
                 I am a passionate software engineer with a love for creating dynamic and user-friendly web applications. My journey in tech started with a simple curiosity about how websites worked, and it has since blossomed into a full-fledged career. I thrive on challenges and am constantly learning new technologies to push the boundaries of what's possible on the web.
               </p>
               <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-                When I'm not coding, you can find me exploring the outdoors, experimenting with new recipes, or contributing to open-source projects.
+                When I'm not coding, you can find me exploring the outdoors, experimenting with new recipes, or listening to music.
               </p>
             </div>
           </div>
