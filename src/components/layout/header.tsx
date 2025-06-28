@@ -102,12 +102,11 @@ export function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuContent align="end" className="w-64">
                 {navItems.map((item) => (
                   <DropdownMenuItem key={item.href} asChild className="cursor-pointer focus:bg-transparent">
-                    <Link href={item.href} className="group flex w-full items-center gap-2">
+                    <Link href={item.href} className="group flex w-full items-center">
                         <item.icon className={cn(
-                          "h-4 w-4",
                           pathname === item.href ? 'text-primary' : 'text-foreground/60',
                           'group-hover:text-primary'
                       )} />
