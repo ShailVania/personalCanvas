@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from './ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 type ProjectCardProps = {
   title: string;
@@ -20,7 +21,6 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, description, imageUrl, animatedImageUrl, projectUrl, tags, imageHint }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const currentImage = isHovered && animatedImageUrl ? animatedImageUrl : imageUrl;
   
   return (
     <Card 
@@ -31,13 +31,25 @@ export function ProjectCard({ title, description, imageUrl, animatedImageUrl, pr
       <CardHeader className="p-0 rounded-t-2xl overflow-hidden">
         <div className="relative h-48 w-full">
           <Image
-            src={currentImage}
+            src={imageUrl}
             alt={title}
             fill
             className="object-cover"
             data-ai-hint={imageHint}
-            unoptimized={currentImage.endsWith('.gif')}
           />
+          {animatedImageUrl && (
+            <Image
+              src={animatedImageUrl}
+              alt={title}
+              fill
+              className={cn(
+                "object-cover transition-opacity duration-300 ease-in-out",
+                isHovered ? "opacity-100" : "opacity-0"
+              )}
+              data-ai-hint={imageHint}
+              unoptimized
+            />
+          )}
         </div>
       </CardHeader>
       <CardContent className="flex-1 p-6">

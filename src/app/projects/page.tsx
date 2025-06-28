@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Trek-Tix',
     description: 'An adventure ticket booking platform for nearby experiences.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/trekTixNew.svg',
     animatedImageUrl: '/trekTix.gif',
     projectUrl: 'https://github.com/ShailVania/Adventure-Event-Booking',
     tags: ['Python', 'Django'],
