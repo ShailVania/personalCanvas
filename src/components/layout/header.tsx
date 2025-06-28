@@ -21,6 +21,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTheme } from 'next-themes';
@@ -128,7 +129,7 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-64">
                 {navItems.map((item) => (
-                  <DropdownMenuItem key={item.href} asChild className="cursor-pointer focus:bg-transparent">
+                  <DropdownMenuItem key={item.href} asChild className="cursor-pointer">
                     <Link href={item.href} className="group flex w-full items-center">
                         <item.icon className={cn(
                           pathname === item.href ? 'text-primary' : 'text-foreground/60',
@@ -146,12 +147,12 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
-                <DropdownMenuItem className="cursor-default focus:bg-transparent hover:bg-transparent" onSelect={(e) => e.preventDefault()}>
+                <DropdownMenuLabel className="px-3 py-2 text-base font-normal">
                   <div className="flex w-full items-center justify-between">
                     <ThemeSwitcher />
                     {MuteButton}
                   </div>
-                </DropdownMenuItem>
+                </DropdownMenuLabel>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
