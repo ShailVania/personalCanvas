@@ -5,13 +5,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
-  Code,
   Home,
   User,
   Briefcase,
   FileText,
   Mail,
-  Menu,
   Volume2,
   VolumeX,
 } from 'lucide-react';
@@ -22,6 +20,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTheme } from 'next-themes';
@@ -127,32 +126,36 @@ export function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-64">
-                {navItems.map((item) => (
-                  <DropdownMenuItem key={item.href} asChild className="cursor-pointer">
-                    <Link href={item.href} className="group flex w-full items-center">
-                        <item.icon className={cn(
-                          pathname === item.href ? 'text-primary' : 'text-foreground/60',
-                          'group-hover:text-primary'
-                      )} />
-                      <span className={cn(
-                          'font-bold transition-colors',
-                          pathname === item.href
-                              ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
-                              : 'text-foreground/60',
-                          'group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
-                      )}>
-                          {item.label}
-                      </span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-                <DropdownMenuLabel className="px-3 py-2 text-base font-normal">
-                  <div className="flex w-full items-center justify-between">
-                    <ThemeSwitcher />
-                    {MuteButton}
-                  </div>
-                </DropdownMenuLabel>
+              <DropdownMenuContent align="end" className="w-[80vw] max-w-xs p-4">
+                <div className="flex flex-col items-center justify-center space-y-4">
+                    {navItems.map((item) => (
+                      <DropdownMenuItem key={item.href} asChild className="w-full cursor-pointer text-xl">
+                        <Link href={item.href} className="group flex w-full items-center justify-center gap-4" onClick={() => setIsMenuOpen(false)}>
+                            <item.icon className={cn(
+                              'h-7 w-7',
+                              pathname === item.href ? 'text-primary' : 'text-foreground/60',
+                              'group-hover:text-primary'
+                          )} />
+                          <span className={cn(
+                              'font-bold transition-colors',
+                              pathname === item.href
+                                  ? 'bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent'
+                                  : 'text-foreground/60',
+                              'group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent'
+                          )}>
+                              {item.label}
+                          </span>
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                    <DropdownMenuSeparator className="w-full" />
+                    <DropdownMenuLabel className="w-full text-base font-normal">
+                      <div className="flex w-full items-center justify-center gap-8">
+                        <ThemeSwitcher />
+                        {MuteButton}
+                      </div>
+                    </DropdownMenuLabel>
+                </div>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
