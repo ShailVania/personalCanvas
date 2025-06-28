@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Q-win',
     description: 'An innovative event management app made for University of Windsor',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'qwin.svg',
     animatedImageUrl: '/qwin.gif',
     projectUrl: 'https://qwin.web.app/',
     tags: ['React', 'Firebase', 'TypeScript'],
