@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Q-win',
     description: 'An innovative event management app made for University of Windsor',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/qwin.svg',
     animatedImageUrl: '/qwin.gif',
     projectUrl: 'https://qwin.web.app/',
     tags: ['React', 'Firebase', 'TypeScript'],
@@ -22,22 +22,39 @@ const projects = [
     imageHint: 'creative design',
   },
   {
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce site with a custom backend, payment integration, and a sleek user interface.',
+    title: 'Coming Soon',
+    description: 'More projects are in the works! Check back later.',
     imageUrl: 'https://placehold.co/600x400.png',
     projectUrl: '#',
-    tags: ['React', 'Node.js', 'Firebase'],
-    imageHint: 'online shopping',
+    tags: ['In Progress'],
+    imageHint: 'under construction wrench',
   },
   {
-    title: 'Data Visualization Dashboard',
-    description: 'An interactive dashboard for visualizing complex datasets, helping users to derive insights easily.',
+    title: 'Coming Soon',
+    description: 'More projects are in the works! Check back later.',
     imageUrl: 'https://placehold.co/600x400.png',
     projectUrl: '#',
-    tags: ['React', 'Data Viz', 'Dashboards'],
-    imageHint: 'charts graphs',
+    tags: ['In Progress'],
+    imageHint: 'under construction blueprint',
   },
 ];
+
+// {
+//   title: 'E-commerce Platform',
+//   description: 'A full-featured e-commerce site with a custom backend, payment integration, and a sleek user interface.',
+//   imageUrl: 'https://placehold.co/600x400.png',
+//   projectUrl: '#',
+//   tags: ['React', 'Node.js', 'Firebase'],
+//   imageHint: 'online shopping',
+// },
+// {
+//   title: 'Data Visualization Dashboard',
+//   description: 'An interactive dashboard for visualizing complex datasets, helping users to derive insights easily.',
+//   imageUrl: 'https://placehold.co/600x400.png',
+//   projectUrl: '#',
+//   tags: ['React', 'Data Viz', 'Dashboards'],
+//   imageHint: 'charts graphs',
+// },
 
 export default function Projects() {
   return (
@@ -48,7 +65,7 @@ export default function Projects() {
           <h1 className="font-headline text-5xl font-semibold italic md:text-6xl">My Projects</h1>
           <p className="mt-4 text-lg text-muted-foreground">A selection of my work.</p>
         </Card>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
